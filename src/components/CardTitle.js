@@ -2,11 +2,7 @@ import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 
 export const CardTitle = (props) => {
-  return (
-    <Text onPress={props.onPress} style={styles.cardTitle}>
-      {props.title}
-    </Text>
-  );
+  return <Text style={styles.cardTitle}>{props.title}</Text>;
 };
 
 const styles = StyleSheet.create({
