@@ -6,7 +6,7 @@ export const Card = (props) => {
   return (
     <View style={styles.card}>
       <CardTitle title={props.title} />
-      <Text>{props.text}</Text>
+      <Text style={styles.text}>{props.text}</Text>
     </View>
   );
 };

@@ -8,6 +8,7 @@ export const CardTitle = (props) => {
 const styles = StyleSheet.create({
   cardTitle: {
     color: 'white',
-    fontSize: 18,
+    fontWeight: 'bold',
+    fontSize: 22,
   },
 });
