@@ -16,9 +16,14 @@ const styles = StyleSheet.create({
     borderColor: 'white',
     flexDirection: 'column',
     borderRadius: 5,
+    borderWidth: 1,
     padding: 10,
+    width: '30%',
+    marginRight: 5,
+    marginBottom: 5,
   },
   text: {
     color: 'white',
+    marginTop: 18,
   },
 });
