@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { Card } from './src/components/Card';
 import { dataArray } from './src/dataArray';
 
@@ -22,20 +22,24 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>{pageTitle}</Text>
-      <View style={styles.cardsContainer}>
-        {dataArray.map((item, index) => (
-          <Card onClick={changeTitle} title={item.title} text={item.text} key={index} />
-        ))}
+    <ScrollView>
+      <View style={styles.container}>
+        <Text style={styles.title}>{pageTitle}</Text>
+        <View style={styles.cardsContainer}>
+          {dataArray.map((item, index) => (
+            <Card onClick={changeTitle} title={item.title} text={item.text} key={index} />
+          ))}
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    minHeight: '100%',
     paddingTop: 48,
+    paddingHorizontal: 10,
     backgroundColor: 'red',
     alignItems: 'center',
     justifyContent: 'center',
@@ -48,5 +52,6 @@ const styles = StyleSheet.create({
   cardsContainer: {
     flexWrap: 'wrap',
     marginTop: 32,
+    flexDirection: 'row',
   },
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { CardTitle } from './CardTitle';
 
 export const Card = (props) => {
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderWidth: 1,
     padding: 10,
-    width: '30%',
+    width: '45%',
     marginRight: 5,
     marginBottom: 5,
   },
