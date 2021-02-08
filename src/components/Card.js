@@ -9,9 +9,7 @@ export const Card = (props) => {
   return (
     <TouchableOpacity style={styles.card} onPress={clickCard}>
       <CardTitle title={props.title} />
-      <Text onPress={clickCard} style={styles.text}>
-        {props.text}
-      </Text>
+      <Text style={styles.text}>{props.text}</Text>
     </TouchableOpacity>
   );
 };
